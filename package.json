@@ -28,7 +28,7 @@
     "redux-form": "^6.1.1",
     "redux-thunk": "^2.1.0",
     "sass-loader": "^4.0.2",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack": "^2.2.0-rc.0",
+    "webpack-dev-server": "^2.2.0-rc.0"
   }
 }
