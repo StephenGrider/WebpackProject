@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
@@ -11,10 +12,8 @@ const TEXT_FIELDS = [
 class ArtistFilter extends Component {
   componentWillMount() {
     if (this.props.filters) {
-      this.props.searchArtists({
-        name: '',
-        ...this.props.filters
-      });
+      const criteria = _.extend({}, { name: '' }, this.props.filters);
+      this.props.searchArtists(criteria);
     } else {
       this.props.searchArtists({
         name: '',
@@ -29,10 +28,8 @@ class ArtistFilter extends Component {
   }
 
   handleSubmit(formProps) {
-    this.props.searchArtists({
-      name: '',
-      ...formProps
-    });
+    const criteria = _.extend({ name: '' }, formProps);
+    this.props.searchArtists(criteria);
   }
 
   renderInputs() {

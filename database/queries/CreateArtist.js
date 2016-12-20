@@ -8,12 +8,14 @@ const db = require('./db');
  * @return {promise} A promise that resolves with the Artist that was created
  */
 module.exports = (artistProps) => {
-  const artist = {
-    ...artistProps,
-    _id: _.uniqueId(),
-    age: parseInt(artistProps.age) || 20,
-    yearsActive: parseInt(artistProps.yearsActive) || 5
-   };
+  const artist = _.extend({},
+    artistProps,
+    {
+      _id: _.uniqueId(),
+      age: parseInt(artistProps.age) || 20,
+      yearsActive: parseInt(artistProps.yearsActive) || 5
+    }
+  );
   db.push(artist);
 
   return new Promise((resolve, reject) => {

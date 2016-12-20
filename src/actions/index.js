@@ -182,5 +182,5 @@ const refreshSearch = (dispatch, getState) => {
   const { artists: { offset, limit } } = getState();
   const criteria = getState().form.filters.values;
 
-  dispatch(searchArtists({ name: '', ...criteria }, offset, limit));
+  dispatch(searchArtists(_.extend({}, { name: '' }, criteria), offset, limit));
 };
