@@ -1,8 +1,0 @@
-{
-  "extends": "rallycoding",
-  "rules": {
-    "arrow-body-style": 0,
-    "no-underscore-dangle": 0,
-    "radix": 0
-  }
-}
