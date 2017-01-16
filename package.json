@@ -28,6 +28,6 @@
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.26.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.0-rc.0"
+    "webpack": "2.2.0-rc.0"
   }
 }
